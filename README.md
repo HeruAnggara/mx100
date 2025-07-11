@@ -46,7 +46,7 @@ MX100
 
     ika Anda lebih suka mengimpor dari file SQL yang sudah disiapkan.
 
-    Pastikan file mx100.sql tersedia di root proyek.
+    Pastikan file mx100_db.sql tersedia di root proyek.
 
     Buat database mx100_db (atau nama lain sesuai .env).
 
