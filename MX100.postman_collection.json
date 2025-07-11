@@ -1,0 +1,2057 @@
+{
+	"info": {
+		"_postman_id": "ec1b3645-b532-4f8b-beae-f285012a4e60",
+		"name": "MX100",
+		"description": "Untuk Melihat CV bisa gunakan url/{{link_cv}}\n\nContoh:\n\n[http://localhost:8000/storage/cvs/DiU2XdlYxQVt0EiqQChuvglVOreoGOYavJ93bEEF.pdf](http://localhost:8000/storage/cvs/DiU2XdlYxQVt0EiqQChuvglVOreoGOYavJ93bEEF.pdf)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26033518"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Heru Susanto\",\r\n    \"email\": \"heru.susanto@freelance.com\",\r\n    \"password\": \"password123\",\r\n    \"password_confirmation\": \"password123\",\r\n    \"role\": \"freelancer\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Employer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"PT. Teknologi ABC\",\r\n    \"email\": \"hrd@techabc.com\",\r\n    \"password\": \"password123\",\r\n    \"password_confirmation\": \"password123\",\r\n    \"role\": \"employer\"\r\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/register",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 16:24:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"201\",\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"name\": \"PT. Teknologi ABC\",\n        \"email\": \"hrd@techabc.com\",\n        \"role\": \"employer\",\n        \"updated_at\": \"2025-07-10T16:24:17.000000Z\",\n        \"created_at\": \"2025-07-10T16:24:17.000000Z\",\n        \"id\": 2,\n        \"profile\": {\n            \"id\": 2,\n            \"user_id\": 2,\n            \"company_info\": null,\n            \"cv\": null,\n            \"phone_number\": null,\n            \"skills\": null,\n            \"created_at\": \"2025-07-10T16:24:17.000000Z\",\n            \"updated_at\": \"2025-07-10T16:24:17.000000Z\"\n        }\n    },\n    \"access_token\": \"3|3VVw49QeVXlKSN9dzrdMSFtZ4H1oimXC7H1h4Jui80e5d115\"\n}"
+						},
+						{
+							"name": "Freelancer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Heru Susanto\",\r\n    \"email\": \"heru.susanto@freelance.com\",\r\n    \"password\": \"password123\",\r\n    \"password_confirmation\": \"password123\",\r\n    \"role\": \"freelancer\"\r\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/register",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 16:25:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"201\",\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"name\": \"Heru Susanto\",\n        \"email\": \"heru.susanto@freelance.com\",\n        \"role\": \"freelancer\",\n        \"updated_at\": \"2025-07-10T16:25:07.000000Z\",\n        \"created_at\": \"2025-07-10T16:25:07.000000Z\",\n        \"id\": 3,\n        \"profile\": {\n            \"id\": 3,\n            \"user_id\": 3,\n            \"company_info\": null,\n            \"cv\": null,\n            \"phone_number\": null,\n            \"skills\": null,\n            \"created_at\": \"2025-07-10T16:25:07.000000Z\",\n            \"updated_at\": \"2025-07-10T16:25:07.000000Z\"\n        }\n    },\n    \"access_token\": \"4|XYGTVBuhwZWLxAtRi8fRiaaUvJIlMs7bdjfWpnqN84ed0056\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"heru.susanto@freelance.com\",\r\n    \"password\":\"password123\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Employer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"hrd@techabc.com\",\r\n    \"password\":\"password123\"\r\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 16:26:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"200\",\n    \"message\": \"Login successful\",\n    \"access_token\": \"5|kRU5LonKCBoiCVDqdtd2InvIZs9UK30fmP7KJWIY6d44ea9b\"\n}"
+						},
+						{
+							"name": "Freelancer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"heru.susanto@freelance.com\",\r\n    \"password\":\"password123\"\r\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 16:26:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"200\",\n    \"message\": \"Login successful\",\n    \"access_token\": \"6|5kvjlYsQCzrPsxFU0WIfvQEt7CnbQIliMVgJ9Izif729bfae\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN_FREELANCER}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/logout",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_FREELANCER}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/logout",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 13:37:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"200\",\n    \"message\": \"You have successfully been logged out.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN_FREELANCER}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "content-type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_FREELANCER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/user",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 16:27:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"200\",\n    \"message\": \"User information\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"PT. Teknologi ABC\",\n        \"email\": \"hrd@techabc.com\",\n        \"email_verified_at\": null,\n        \"role\": \"employer\",\n        \"created_at\": \"2025-07-10T16:24:17.000000Z\",\n        \"updated_at\": \"2025-07-10T16:24:17.000000Z\",\n        \"profile\": {\n            \"id\": 2,\n            \"user_id\": 2,\n            \"company_info\": null,\n            \"cv\": null,\n            \"phone_number\": null,\n            \"skills\": null,\n            \"created_at\": \"2025-07-10T16:24:17.000000Z\",\n            \"updated_at\": \"2025-07-10T16:24:17.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Endpoint Authentikasi"
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Get Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN_EMPLOYER}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/profile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Employer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_EMPLOYER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/profile",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Jul 2025 02:56:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Profile fetched successfully\",\n    \"data\": {\n        \"user_id\": 2,\n        \"name\": \"HRD PT. Teknologi ABC\",\n        \"email\": \"hrd@techabc.com\",\n        \"role\": \"employer\",\n        \"profile\": {\n            \"company_info\": \"Perusahaan kami adalah pemimpin di industri cloud computing dan solusi AI di Asia Tenggara.\",\n            \"profile_updated_at\": \"2025-07-10T16:44:47.000000Z\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Freelancer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_FREELANCER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/profile",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Jul 2025 02:56:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Profile fetched successfully\",\n    \"data\": {\n        \"user_id\": 3,\n        \"name\": \"Heru Anggara\",\n        \"email\": \"heru.susanto@freelance.com\",\n        \"role\": \"freelancer\",\n        \"profile\": {\n            \"phone_number\": \"081298765432\",\n            \"skills\": \"Frontend & Backend Development, API Design, Laravel, NodeJS, Docker\",\n            \"profile_updated_at\": \"2025-07-10T16:40:12.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN_EMPLOYER}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "HRD PT. Teknologi ABC",
+									"type": "text"
+								},
+								{
+									"key": "company_info",
+									"value": "Perusahaan kami adalah pemimpin di industri cloud computing dan solusi AI di Asia Tenggara.",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Heru Anggara",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number",
+									"value": "081298765432",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "skills",
+									"value": "Frontend & Backend Development, API Design, Laravel, NodeJS, Docker",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "cv",
+									"type": "file",
+									"src": "/C:/Users/Heru Anggara/Downloads/Modul Sistem Basis Data - Sesi 14.pdf",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/profile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Employer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_EMPLOYER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "HRD PT. Teknologi ABC",
+											"type": "text"
+										},
+										{
+											"key": "company_info",
+											"value": "Perusahaan kami adalah pemimpin di industri cloud computing dan solusi AI di Asia Tenggara.",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Heru Anggara",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone_number",
+											"value": "081298765432",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "skills",
+											"value": "Frontend & Backend Development, API Design, Laravel, NodeJS, Docker",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "cv",
+											"type": "file",
+											"src": "/C:/Users/Heru Anggara/Downloads/blank.pdf",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/profile",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 16:44:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Profile updated successfully\",\n    \"data\": {\n        \"user_id\": 2,\n        \"name\": \"HRD PT. Teknologi ABC\",\n        \"email\": \"hrd@techabc.com\",\n        \"role\": \"employer\",\n        \"profile\": {\n            \"company_info\": \"Perusahaan kami adalah pemimpin di industri cloud computing dan solusi AI di Asia Tenggara.\",\n            \"profile_updated_at\": \"2025-07-10T16:44:47.000000Z\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Freelancer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_FREELANCER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Heru Anggara",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "081298765432",
+											"type": "text"
+										},
+										{
+											"key": "skills",
+											"value": "Frontend & Backend Development, API Design, Laravel, NodeJS, Docker",
+											"type": "text"
+										},
+										{
+											"key": "cv",
+											"type": "file",
+											"src": "/C:/Users/Heru Anggara/Downloads/Modul Sistem Basis Data - Sesi 14.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/profile",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.22"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Jul 2025 03:11:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Profile updated successfully\",\n    \"data\": {\n        \"user_id\": 3,\n        \"name\": \"Heru Anggara\",\n        \"email\": \"heru.susanto@freelance.com\",\n        \"role\": \"freelancer\",\n        \"profile\": {\n            \"phone_number\": \"081298765432\",\n            \"cv\": \"/storage/cvs/DiU2XdlYxQVt0EiqQChuvglVOreoGOYavJ93bEEF.pdf\",\n            \"skills\": \"Frontend & Backend Development, API Design, Laravel, NodeJS, Docker\",\n            \"profile_updated_at\": \"2025-07-11T03:11:42.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Endpoint Profile"
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "Employer",
+					"item": [
+						{
+							"name": "Membuat Lowongan",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_EMPLOYER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Copywriter untuk Website & Iklan\",\r\n    \"description\": \"Mencari copywriter freelance untuk menulis konten website, artikel blog (SEO-friendly), dan naskah untuk iklan digital. Pengalaman di bidang F&B diutamakan.\",\r\n    \"honorarium\": \"Rp 4.000.000 per proyek\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/employer/jobs",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"employer",
+										"jobs"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_EMPLOYER}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \r\n    \"title\": \"Fullstack Developer\",\r\n    \"description\": \"Full-Time / Jangka Panjang\",\r\n    \"honorarium\": \"Rp 12.000.000 per bulan\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/employer/jobs",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"employer",
+												"jobs"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 02:02:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"201\",\n    \"message\": \"Job created successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Fullstack Developer\",\n        \"description\": \"Full-Time / Jangka Panjang\",\n        \"honorarium\": \"Rp 12.000.000 per bulan\",\n        \"status\": null,\n        \"published_at\": null,\n        \"created_at\": \"Jul 11, 2025\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "List Lowongan Pekerjaan",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_EMPLOYER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/employer/jobs",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"employer",
+										"jobs"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_EMPLOYER}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/employer/jobs",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"employer",
+												"jobs"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 06:27:40 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Copywriter untuk Website & Iklan\",\n            \"description\": \"Mencari copywriter freelance untuk menulis konten website, artikel blog (SEO-friendly), dan naskah untuk iklan digital. Pengalaman di bidang F&B diutamakan.\",\n            \"honorarium\": \"Rp 4.000.000 per proyek\",\n            \"status\": \"draft\",\n            \"applicants\": 0,\n            \"published_at\": \"Jul 11, 2025\",\n            \"created_at\": \"Jul 11, 2025\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Senior PHP Developer (Laravel)\",\n            \"description\": \"Membangun dan memelihara aplikasi web dengan Laravel. Pengalaman dengan Vue.js adalah nilai tambah.\",\n            \"honorarium\": \"Rp 18.000.000/bulan\",\n            \"status\": \"published\",\n            \"applicants\": 1,\n            \"published_at\": \"Jul 11, 2025\",\n            \"created_at\": \"Jul 11, 2025\"\n        }\n    ],\n    \"status\": 200,\n    \"message\": \"Jobs fetched successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Publish Lowongan Pekerjaan",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_EMPLOYER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"published\"\r\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/employer/jobs/:job_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"employer",
+										"jobs",
+										":job_id"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "job_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Publish Pekerjaan",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_EMPLOYER}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"published\"\r\n}"
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/employer/jobs/:job_id",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"employer",
+												"jobs",
+												":job_id"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": null,
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "job_id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 02:06:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"200\",\n    \"message\": \"Job updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Fullstack Developer\",\n        \"description\": \"Full-Time / Jangka Panjang\",\n        \"honorarium\": \"Rp 12.000.000 per bulan\",\n        \"status\": \"published\",\n        \"published_at\": \"Jul 11, 2025\",\n        \"created_at\": \"Jul 11, 2025\"\n    }\n}"
+								},
+								{
+									"name": "Draft Pekerjaan",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_EMPLOYER}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"draft\"\r\n}"
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/employer/jobs/:job_id",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"employer",
+												"jobs",
+												":job_id"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": null,
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "job_id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 03:32:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"200\",\n    \"message\": \"Job updated successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Copywriter untuk Website & Iklan\",\n        \"description\": \"Mencari copywriter freelance untuk menulis konten website, artikel blog (SEO-friendly), dan naskah untuk iklan digital. Pengalaman di bidang F&B diutamakan.\",\n        \"honorarium\": \"Rp 4.000.000 per proyek\",\n        \"status\": \"draft\",\n        \"published_at\": \"Jul 11, 2025\",\n        \"created_at\": \"Jul 11, 2025\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "List Pelamar",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_EMPLOYER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/employer/jobs/:job_id/applicants",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"employer",
+										"jobs",
+										":job_id",
+										"applicants"
+									],
+									"variable": [
+										{
+											"key": "job_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_EMPLOYER}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/employer/jobs/:job_id/applicants",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"employer",
+												"jobs",
+												":job_id",
+												"applicants"
+											],
+											"variable": [
+												{
+													"key": "job_id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 04:16:43 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"Heru Anggara\",\n            \"email\": \"heru.susanto@freelance.com\",\n            \"skills\": \"Frontend & Backend Development, API Design, Laravel, NodeJS, Docker\",\n            \"cv\": \"/storage/cvs/DiU2XdlYxQVt0EiqQChuvglVOreoGOYavJ93bEEF.pdf\",\n            \"applied_at\": \"2 hours ago\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/employer/jobs/1/applicants?page=1\",\n        \"last\": \"http://localhost:8000/api/employer/jobs/1/applicants?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/employer/jobs/1/applicants?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8000/api/employer/jobs/1/applicants\",\n        \"per_page\": 10,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"status\": 200,\n    \"message\": \"Applicants fetched successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Detail Lowongan Pekerjaan",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_EMPLOYER}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/employer/jobs/:job_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"employer",
+										"jobs",
+										":job_id"
+									],
+									"variable": [
+										{
+											"key": "job_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_EMPLOYER}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/employer/jobs/1",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"employer",
+												"jobs",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 06:16:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"200\",\n    \"message\": \"Job fetched successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Fullstack Developer\",\n        \"description\": \"Full-Time / Jangka Panjang\",\n        \"honorarium\": \"Rp 12.000.000 per bulan\",\n        \"status\": \"published\",\n        \"applicants\": 1,\n        \"published_at\": \"Jul 11, 2025\",\n        \"created_at\": \"Jul 11, 2025\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Edit Lowongan Pekerjaan",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_EMPLOYER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Senior PHP Developer (Laravel)\",\r\n    \"description\": \"Membangun dan memelihara aplikasi web dengan Laravel. Pengalaman dengan Vue.js adalah nilai tambah.\",\r\n    \"honorarium\": \"Rp 18.000.000/bulan\",\r\n    \"status\": \"published\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/employer/jobs/:job_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"employer",
+										"jobs",
+										":job_id"
+									],
+									"variable": [
+										{
+											"key": "job_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_EMPLOYER}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Senior PHP Developer (Laravel)\",\r\n    \"description\": \"Membangun dan memelihara aplikasi web dengan Laravel. Pengalaman dengan Vue.js adalah nilai tambah.\",\r\n    \"honorarium\": \"Rp 18.000.000/bulan\",\r\n    \"status\": \"draft\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/employer/jobs/:job_id",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"employer",
+												"jobs",
+												":job_id"
+											],
+											"variable": [
+												{
+													"key": "job_id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 06:20:33 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"200\",\n    \"message\": \"Job updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Senior PHP Developer (Laravel)\",\n        \"description\": \"Membangun dan memelihara aplikasi web dengan Laravel. Pengalaman dengan Vue.js adalah nilai tambah.\",\n        \"honorarium\": \"Rp 18.000.000/bulan\",\n        \"status\": \"draft\",\n        \"published_at\": \"Jul 11, 2025\",\n        \"created_at\": \"Jul 11, 2025\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Lowongan Pekerjaan",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_EMPLOYER}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/employer/jobs/:job_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"employer",
+										"jobs",
+										":job_id"
+									],
+									"variable": [
+										{
+											"key": "job_id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_EMPLOYER}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/employer/jobs/:job_id",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"employer",
+												"jobs",
+												":job_id"
+											],
+											"variable": [
+												{
+													"key": "job_id",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 06:24:03 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"200\",\n    \"message\": \"Job deleted successfully\"\n}"
+								}
+							]
+						}
+					],
+					"description": "Endpoint Employer"
+				},
+				{
+					"name": "Freelancer",
+					"item": [
+						{
+							"name": "List Lowongan Pekerjaan",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_FREELANCER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/freelancer/jobs",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"freelancer",
+										"jobs"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_FREELANCER}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/freelancer/jobs",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"freelancer",
+												"jobs"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 04:12:13 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"title\": \"Senior PHP Developer (Laravel)\",\n            \"description\": \"Membangun dan memelihara aplikasi web dengan Laravel. Pengalaman dengan Vue.js adalah nilai tambah.\",\n            \"honorarium\": \"Rp 18.000.000/bulan\",\n            \"status\": \"published\",\n            \"employer\": {\n                \"id\": 2,\n                \"company_name\": \"HRD PT. Teknologi ABC\"\n            },\n            \"published_at\": \"Jul 11, 2025\",\n            \"created_at\": \"Jul 11, 2025\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Graphic Designer for Social Media\",\n            \"description\": \"Membuat konten visual untuk Instagram, Facebook, dan TikTok. Mahir menggunakan Adobe Creative Suite.\",\n            \"honorarium\": \"Rp 7.000.000/bulan\",\n            \"status\": \"published\",\n            \"employer\": {\n                \"id\": 4,\n                \"company_name\": \"PT. Digital Kreatif\"\n            },\n            \"published_at\": \"Jul 11, 2025\",\n            \"created_at\": \"Jul 11, 2025\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Virtual Assistant\",\n            \"description\": \"Membantu tugas administratif, manajemen email, dan penjadwalan meeting. Bekerja secara remote.\",\n            \"honorarium\": \"Rp 6.000.000/bulan\",\n            \"status\": \"published\",\n            \"employer\": {\n                \"id\": 6,\n                \"company_name\": \"Solusi Teknologi Nusantara\"\n            },\n            \"published_at\": \"Jul 11, 2025\",\n            \"created_at\": \"Jul 11, 2025\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Project Manager Konstruksi\",\n            \"description\": \"Mengawasi proyek pembangunan dari awal hingga akhir. Memiliki sertifikasi di bidang terkait.\",\n            \"honorarium\": \"Rp 15.000.000 (project-based)\",\n            \"status\": \"published\",\n            \"employer\": {\n                \"id\": 7,\n                \"company_name\": \"Warung Kopi Digital\"\n            },\n            \"published_at\": \"Jul 11, 2025\",\n            \"created_at\": \"Jul 11, 2025\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Fullstack Developer\",\n            \"description\": \"Full-Time / Jangka Panjang\",\n            \"honorarium\": \"Rp 12.000.000 per bulan\",\n            \"status\": \"published\",\n            \"employer\": {\n                \"id\": 2,\n                \"company_name\": \"HRD PT. Teknologi ABC\"\n            },\n            \"published_at\": \"Jul 11, 2025\",\n            \"created_at\": \"Jul 11, 2025\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/freelancer/jobs?page=1\",\n        \"last\": \"http://localhost:8000/api/freelancer/jobs?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/freelancer/jobs?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8000/api/freelancer/jobs\",\n        \"per_page\": 10,\n        \"to\": 5,\n        \"total\": 5\n    },\n    \"status\": 200,\n    \"message\": \"Jobs fetched successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Apply Pekerjaan",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN_FREELANCER}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/freelancer/jobs/:job_id/apply",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"freelancer",
+										"jobs",
+										":job_id",
+										"apply"
+									],
+									"variable": [
+										{
+											"key": "job_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_FREELANCER}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/freelancer/jobs/:job_id/apply",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"freelancer",
+												"jobs",
+												":job_id",
+												"apply"
+											],
+											"variable": [
+												{
+													"key": "job_id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 02:15:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"200\",\n    \"message\": \"Successfully applied to the job.\"\n}"
+								},
+								{
+									"name": "Already apply",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN_FREELANCER}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/freelancer/jobs/:job_id/apply",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"freelancer",
+												"jobs",
+												":job_id",
+												"apply"
+											],
+											"variable": [
+												{
+													"key": "job_id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.22"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Jul 2025 02:16:08 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"200\",\n    \"message\": \"You have already applied to this job.\"\n}"
+								}
+							]
+						}
+					],
+					"description": "Endpoint Job Freelancer"
+				}
+			],
+			"description": "Endpoint Job for Employer Dan Freelancer"
+		}
+	]
+}
